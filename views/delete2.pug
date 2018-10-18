@@ -1,0 +1,15 @@
+extends ./layout
+block content
+  h1 HTML
+  P HTML is Web Basic Code!
+  br
+  ul
+    each topic in list
+      li
+        a(href='/html/'+topic.id)= topic.title
+  article
+   h1= 'Delete? '+topic.title
+   form(action='/html/'+topic.id+'/delete2' method='post')
+      p
+        input(type='submit' value='YES')
+   a(href='/html/'+topic.id) NO

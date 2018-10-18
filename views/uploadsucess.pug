@@ -1,0 +1,10 @@
+extends ./layout
+block content
+ h1(style="color:blue") File Upload! 
+ h3= name + ' 파일이 업로드 되었습니다.!'  
+ br
+ .line
+   br
+   form(action='/upload' method='post' enctype="multipart/form-data")
+     input(type='file' name="userfile")     
+     input(type='submit' value='전송')

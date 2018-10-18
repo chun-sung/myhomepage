@@ -1,0 +1,28 @@
+extends ./layout
+block content
+  h1 Node
+  P.nodetitle Node is javascript runtime !
+  .wrapper
+      .title
+        ul
+          each topic in list
+            li
+              a(href='/node/'+topic.id)= topic.title
+      .description
+        article
+          if topic
+            h2= topic.title
+            = topic.description
+            div= 'by '+topic.author
+          else
+            h2.oneline Welcome Nodejs
+            | This is Server Side JavaScript.
+      .submenu          
+          ul
+            li
+              a(href='/add') Create
+            if topic
+              li
+                a(href='/update/'+topic.id+'/edit') Edit
+              li
+                a(href='/node/'+topic.id+'/delete') Delete

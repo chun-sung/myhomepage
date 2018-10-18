@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+   meta(charset='utf-8')
+   meta(name="viewport" content="width=device-width, initial-scale=1.0")
+   title SpringStar
+   link(rel='shortcut icon', href='http://localhost:3000/img/favicon.ico')
+   link(rel='stylesheet', href='http://localhost:3000/css/style.css')
+   script(src='http://code.jquery.com/jquery.js')
+   script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
+  body  
+   h1.logotitle
+      .loggo @
+      a#title(href='/') Programing Story!   
+   if session       
+      b#login= session
+      a#login(href='/logout') <b style="color: blue">Logout</b>    
+   else
+      a#login(href='/login/') <b style="color: blue">Login</b>
+   
+   p.maintitle
+      | <b>프로그래밍</b> 세계에 빠저 봅시다. 걸어서 <b>개발</b>까지~<br>
+      | HTML > CSS > JavaScript(jQuery) 그리고 <b style="color:red">Node.js</b> 까지
+  
+   ul#menu
+    li
+      a(href='/html') HTML
+    li
+      a(href='/css') CSS
+    li
+      a(href='/javascript') JavaScript
+    li
+      a(href='/upload') FileUpload
+    li
+      a(href='/index2.html') Static Home
+    li
+      a(href='/node') Node.js
+   
+   //img(class="mainimg" src='https://source.unsplash.com/random' width='540' height='300')
+   img(class="mainimg" src='https://source.unsplash.com/user/erondu' width='540' height='300')
+   //----------위로 header-------------------------------------------------
+   block content    
+   //----------아래 footer--------------------------------------------------
+   p.today 오늘은 몇일?   
+   = date
+   
+   p.copy copyleft by SpringStar
+   script(type='text/javascript' src='http://localhost:3000/js/script.js')
+   

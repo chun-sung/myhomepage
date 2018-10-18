@@ -1,0 +1,13 @@
+extends ./layout
+block content
+    h1(style="color:royalblue") Welcome in !~
+    
+    if session
+      br
+      h2 안녕하세요 
+      h2= session +'님 오랜만입니다.'
+      br
+      br
+    else
+      h4 
+        a(href="/member" style="color:red") 회원가입

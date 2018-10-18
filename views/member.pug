@@ -1,0 +1,16 @@
+extends ./layout
+block content
+ h1(style="color:royalblue") 회원 가입
+
+ form.form(action='/member' method='post')
+    p(style="margin-bottom: 5px")
+      input(type='text' size="25" name='username' placeholder='name')
+    p
+      input(type='password' size="25" name='password' placeholder='password')
+    p
+      input(type='text' size="25" name='displayName' placeholder='displayName')
+    p     
+      input(type='submit' value='회원가입')
+      a(href='/') 취소
+
+   

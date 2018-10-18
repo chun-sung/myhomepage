@@ -1,0 +1,103 @@
+* {  margin: 0;  padding: 0;
+   text-decoration: none;
+   list-style: none;
+    /* border: 0.1px solid grey; */
+    text-align: center;
+    color: black;
+  }
+.logotitle {
+  margin-top: 30px;
+}
+.maintitle {
+  margin-bottom: 10px;
+}
+.nodetitle{
+  margin-bottom: 20px;
+}
+.onepad {
+  padding: 3px;
+}
+.loggo {
+  display: inline-block;
+  background-image: url(/img/logo.png);
+  width: 50px;
+  height: 50px;
+}
+a:hover {
+  color: royalblue;
+}
+#menu {
+  border: 1px solid grey;
+  width: 1070px;
+  margin: auto;
+  background-color: rgb(41, 3, 128);
+  overflow: hidden;   /* float: left 로 인해 자식태그를 인식할수 있도록 */
+}
+#menu li {
+  /* display: inline-block; */
+  float: left;  
+  padding-top: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 32px;
+  font-size: 20px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+#menu li a {
+color: white;
+}
+#menu li a:hover{
+color: red;
+}
+#login{
+  display: inline-block;
+  margin-left: 1000px;
+  color: red;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.title{
+  flex-basis: 250px;
+  border: 0.1px solid grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.description {
+  flex-basis: 700px;
+  border-top: 0.1px solid grey;
+  border-bottom: 0.1px solid grey;
+}
+.mainimg {
+  padding-top: 20px;
+}
+article {
+  padding-top: 30px;
+}
+.submenu {
+  flex-basis: 100px;
+  border: 0.1px solid grey;
+  padding-top: 35px;
+
+}
+.line {
+  margin: 0 auto;
+  width: 400px;
+  height: 65px;
+  border: 1px solid grey;
+  background-color: rgba(128, 128, 128, 0.288);
+}
+.today{
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.copy {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form {
+  margin-top: -1px;
+  margin-left: 10px;
+}

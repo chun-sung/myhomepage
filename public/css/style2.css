@@ -1,0 +1,510 @@
+/* -----------------base & common code------------------ */
+
+* {  margin: 0;  padding: 0;  text-decoration: none;
+  /* border: 0.1px solid grey; */
+}
+header, main, footer {
+  text-align: center;
+}
+#wrapper { width: 1200px; margin: 0 auto;}
+
+/* -------------------header code------------------ */
+header {
+
+}
+.head {
+  width: 100%;
+  float: left;
+  height: 70px;
+  padding-top: 15px;
+}
+.head h2 {
+  padding-bottom: 30px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+@keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+}
+.spin {
+  position: fixed;
+  left: 2%;
+  margin-left: -200px;
+  top: 20px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: rgba(195,35,35, 0.6);
+  margin: 10px;
+  animation: spin 5s infinite linear;
+  transition: all 2s;
+}
+.spin:hover {
+  background: rgba(0,0,255, 0.3);
+  animation: spin 0.1s infinite linear;
+  transition: all 2s;
+}
+.head h2 a {
+  font-family: 'Shrikhand', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 1);
+  text-decoration: none;
+  transition: all 1s;
+}
+.head h2 a:hover {
+   color: rgba(255, 0, 0, 1);
+   font-size: 2.1rem;
+   transition: all 1s;
+}
+.member {
+  position: absolute;
+  /* float:right; */
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.5);
+  padding: 5px;
+  margin-right: 10px;
+  /* border: 1px solid grey; */
+  left: 50%;
+  width: 80px;
+  margin-left: 440px;
+  top: 50px;
+}
+.member:hover {
+  color: red;
+  text-decoration: none;
+}
+.login {
+  position: absolute;
+  /* float:right; */
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.5);
+  padding: 5px;
+  /* border: 1px solid grey; */
+  left: 50%;
+  width: 80px;
+  margin-left: 360px;
+  top: 50px;
+}
+.login:hover {
+  color: red;
+  text-decoration: none;
+}
+nav {
+  clear: both;
+  padding: 10px;
+  min-width: 1200px;
+}
+.company:hover #sub_menu{
+  display: block;
+}
+#menu {
+  background-color: rgba(215,15, 15,0.95);
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 0;
+  border: 0.5px solid rgba(255, 15, 15, 1);
+}
+#menu>li {
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 35px;
+  margin-right: 35px;
+  height: 40px;
+  padding-top: 7px;
+}
+#menu>li>a {
+  font-family: 'Noto Serif', serif;
+  font-family: 'PT Serif', serif;
+  display: inline-block;
+  height: 40px;
+  color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  width: 120px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+#menu>li>a:hover {
+  color: yellow ;
+  /* text-shadow: 3px 3px 10px yellow; */
+}
+#menu>li>a:active {
+  color: white;
+  text-shadow: 3px 3px 10px yellow;
+}
+.sub_wrapper {
+    width: 1070px;
+    margin: 0 auto;
+    text-align: left;
+ }
+#sub_menu {
+   position: absolute;
+   border: 1px solid grey;
+   background: lightgrey;
+   padding-left: 10px;
+   padding-right: 10px;
+   z-index: 100;
+   display:none;
+}
+#sub_menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+#sub_menu li a{
+    color: black;
+}
+#sub_menu li a:hover {
+  color: red;
+  text-decoration: none;
+}
+.search {
+  margin-top: 0px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.search input {
+  margin-top: 2px;
+  padding: 5px;
+  width: 300px;
+}
+.search input:focus {
+  background-color: rgba(0,0,0,0.2);
+  color: black;
+}
+.search img{
+  margin-left: 3px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 30px;
+}
+.search img:hover {
+  border: 1px solid rgba(0,0,0,0.5);
+}
+/* ----------------main code---------------- */
+
+main {
+  position: relative;
+}
+main .img {
+    clear: both;
+    display: inline-block;
+    width: 580px;
+    height: 190px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.img2>img{
+  height: 190px;
+  border-radius: 10px;
+}
+
+/* -------메인 에니메이션 구간------ */
+@keyframes blink {
+   50%{ color: transparent;}
+}
+@keyframes typing {
+   from { width: 0; }
+}
+@keyframes caret {
+   50% { border-color: transparent; }
+}
+.any-typing {
+   font-family: 'Monoton', cursive;
+   font-family: 'Jua', sans-serif;
+   margin-left: 400px;
+   margin-top: 20px;
+   margin-bottom: 10px;
+   /* font-family: monospace; */
+   overflow: hidden;
+   width: 27ch;
+   border-right: 0.5em solid;
+   white-space: nowrap;
+   animation: typing 3s steps(27),
+               caret 1s steps(1) infinite;
+   margin-bottom: 25px;
+  }
+.any-blink::before {
+  content:'';
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 30px;
+  margin-top: 30px;
+ }
+.any-blink {
+  animation: blink 1s 5 steps(1);
+}
+.any-blink h3 {
+  font-family: 'Monoton', cursive;
+
+}
+/* ----------메인 하단-------- */
+.main-txt-container1{
+  clear: both;
+  display: block;
+  flex-direction: row;
+  width: 1080px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.main-txt-container1:before {
+   content:'';
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.main-txt-container1 * {
+  text-align: left;
+}
+#point-letter {
+  color: black;
+  border-bottom: solid;
+  border-color: rgba(0,0,0,0.2);
+}
+.carouselwrapper {
+  margin: auto;
+  text-align: center;
+  width: 1100px;
+  height: 430px;
+  padding-top: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgba(0,0,0,0.19);
+  border-radius: 80px;
+}
+.carouselwrapper img {
+  border-radius: 30px;
+}
+#main-txt-container2 {
+  width: 1100px;
+  margin-left: 60px;
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#main-txt-container2 .item{
+  padding-right: 20px;
+}
+/* .movi:before {
+  clear: both;
+   content:'';
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+} */
+.movi img{
+  border-radius: 5px;
+}
+iframe {
+  margin-top: 10px;
+}
+.movi {
+  margin-bottom: 10px;
+}
+.movi:before {
+  clear: both;
+   content:'';
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: block;
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+#quickmenu {
+  position: fixed;
+  top: 125px;
+  margin-left: 1170px;
+  left: 50%
+  z-index: 100;
+}
+#quickmenu li {
+  list-style: none;
+  line-height: 0;
+}
+#layer-pop {
+  width: 412px;
+  height: 610px;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  margin-left: -680px ;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: 7px solid rgba(0,0,0, 0.25);
+  background-clip: padding-box;
+  z-index: 10;
+  transition: all  0.5s;
+}
+#layer-pop-text{
+  height: 290px;
+}
+#layer-pop-close {
+  display: block;
+  margin-left: 325px;
+  background-color: rgba(0,0,0,0.2);
+  margin-bottom: 2px;
+  margin-top: 280px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 25px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid grey;
+}
+@keyframes click {
+  to {
+    color: transparent;
+  }
+}
+#click {
+   animation: click 0.5s 99 alternate;
+}
+#layer-pop-close:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: click 0.5s 99 alternate;
+}
+/* -------------패럴랙스--------------- */
+.p2 {
+  color: white;
+}
+.scene {
+/* v는 뷰포트의 약자이고 h는 height의 약자이다.
+(뷰포트 영역의 높이를 차지) 높이 전체를 사용한다는 의미
+50vh 는 화면의 반을 차지한다.*/
+height: 70vh;
+width:  1095px;
+overflow: hidden;
+background-attachment: fixed;
+background-size: cover;
+margin: 0 auto;
+}
+.scene.one {
+background-image: url(/img/sky.png);
+}
+.scene.two {
+background-image: url(/img/main_img.png);
+}
+/* .scene.three {
+background-image: url(img/poster2.jpg);
+} */
+.scene header {
+max-width: 80%;
+position: relative;
+left: 50%;
+top: 50%;
+/* 자기자신의 크기의 반 만큼 왼쪽으로 이동
+자신의 크기의 반만크 아래로 이동 */
+transform: translateX(-50%) translateY(-50%);
+/* text-align: center; */
+color: royalblue;
+}
+.scene header h1{
+font-size:2rem;
+margin-bottom: 1rem;
+
+}
+   /* 지도 가운데 정렬 */
+#daumRoughmapContainer1532583873404 {
+  margin: 0 auto;
+  border-radius: 2px;
+}
+/* -------------footer code--------------- */
+
+.tablewrapper {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  /* background-color: rgba(0,0,0,0.2); */
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+#table {
+  width: 1090px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  background: white;
+  border-radius: 2px;
+}
+#table th {
+  font-family: arial;
+  font-size: 1rem;
+  color: cadetblue;
+  /* background-color: rgba(0,0,0,0.45); */
+  background: rgba(0, 0, 0, 0.75);
+}
+#table tr {
+  height: 30px;
+}
+#table td {
+  padding-left: 100px;
+  padding-right:0px;
+  text-align: left;
+  font-weight: bold;
+  /* border: 1px solid rgba(0,0,0,0.1); */
+  font-family: 'Shrikhand', cursive;
+  font-family: 'Dancing Script', cursive;
+  /* background-color: rgba(0,0,0,0.2); */
+  background: rgba(0, 0, 0, 0.75);
+}
+#table a {
+  text-decoration: none;
+  font-family: 'Monoton', cursive;
+  font-family: 'Jua', sans-serif;
+  font-family: 'Oleo Script', cursive;
+  font-family: 'Lustria', serif;
+  /* color: rgba(0, 0, 0, 0.8); */
+  color: white;
+}
+#table a:hover {
+  color: red;
+}
+.lastwrapper {
+  background: rgba(0, 0, 0, 0.75);
+  height: 380px;
+  padding-top: 5px;
+}
+.lastwrapper>.last{
+  text-align: center;
+}
+.last ul {
+  margin-bottom: 0;
+}
+.last li{
+  padding-top: 10px;
+  display: inline-block;
+}
+.last li a {
+  font-size: 0.8rem;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+}
+.last2 {
+  width: 550px;
+  text-align: left;
+  color: rgba(255,255,255, 0.4);
+  font-size: 0.8rem;
+  margin: 0 auto;
+}
+.copyleft {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+}

@@ -1,0 +1,15 @@
+extends ./layout
+block content
+  h1 Node
+  P Node is javascript runtime !
+  br
+  ul
+    each topic in list
+      li
+        a(href='/node/'+topic.id)= topic.title
+  article
+   h1= 'Delete? '+topic.title
+   form(action='/node/'+topic.id+'/delete' method='post')
+      p
+        input(type='submit' value='YES')
+   a(href='/node/'+topic.id) NO

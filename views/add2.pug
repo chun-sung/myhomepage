@@ -1,0 +1,19 @@
+extends ./layout
+block content
+  h1 HTML
+  P HTML is Web Basic Code!
+  br
+  ul
+    each topic in list
+      li
+        a(href='/html/'+topic.id)= topic.title
+    form(action='/add2_process' method='post')
+     p
+      input(type='text' name='title' placeholder='제목')
+     p
+      textarea(name='description' placeholder='내용' cols='50' rows='10')
+     p
+      input(type='text' name='author' placeholder='저자')
+     p
+      input(type='submit' value='전송')
+      a(href='/html') 취소

@@ -1,0 +1,12 @@
+extends ./layout
+block content
+
+ form(action="/login" method='post')
+  p
+   input(type='text' name="username" placeholder="ID")
+  p
+   input(type='password' name="password" placeholder="Password")
+  p
+   br
+   input(type='submit' value='로그인')
+   a(href='/')  취소

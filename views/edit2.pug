@@ -1,0 +1,17 @@
+extends ./layout
+block content
+  ul
+    each topic in topics
+      li
+         a(href='/html/'+topic.id)= topic.title
+  form(action='/html/'+topic.id+'/edit2' method='post')
+   p
+    input(type='text' name='title' value=topic.title)
+   p
+    textarea(name='description' value=topics.description cols='50' rows='10')
+      =topic.description
+   p
+    input(type='text' name='author' value=topic.author)
+   p
+    input(type='submit' value='전송')
+    a(href='/html') 취소

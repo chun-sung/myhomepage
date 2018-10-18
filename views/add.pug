@@ -1,0 +1,21 @@
+extends ./layout
+block content
+  h1 Node
+  P Node is javascript runtime ! 
+    .wrapper     
+      .title
+        ul
+          each topic in list
+            li
+              a(href='/node/'+topic.id)= topic.title
+      .form       
+        form.form(action='/add_process' method='post')
+          p(style="margin-bottom: 5px")
+            input(type='text' size="48" name='title' placeholder='제목')
+          p
+            textarea(name='description' placeholder='내용' cols='50' rows='10')
+          p
+            input(type='text' size="48" name='author' placeholder='저자')
+          p
+            input(type='submit' value='전송')
+            a(href='/node') 취소

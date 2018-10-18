@@ -1,0 +1,30 @@
+extends ./layout
+block content
+  h1 HTML
+  P HTML is Web Basic Code!
+  br
+  ul
+    each topic in list
+      li
+        a(href='/html/'+topic.id)= topic.title
+  |---------------------------------------------------
+  article
+    if topic
+      br
+      h2= topic.title
+      br
+      = topic.description
+      div= 'by '+topic.author
+    else
+      h2 Wecome HTML
+      | This is HTML.
+  br  
+  ul
+    li
+      a(href='/html/add2') Create
+    if topic
+      li
+        a(href='/update/'+topic.id+'/edit2') Edit
+      li
+        a(href='/html/'+topic.id+'/delete2') Delete
+  br
