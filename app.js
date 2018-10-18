@@ -79,14 +79,14 @@ app.get('/jquery', (req, res) => {
 
 //--- upload 파일 올리기---
 app.get('/upload', (req, res) => {    
-    res.render('upload', { date: date, session:req.session.displayName});
+    res.render('upload', { date:date, session:req.session.displayName});
 });
 app.post('/upload', upload.single('userfile'), (req, res) => {
     if(!req.file){
-        res.render('uploadfail',{ session:req.session.displayName})
+        res.render('uploadfail',{date: date, session:req.session.displayName})
     } else {
         var filename = req.file.filename
-        res.render('uploadsucess', {name:filename, session:req.session.displayName});
+        res.render('uploadsucess', {date: date, name:filename, session:req.session.displayName});
     }
 }); 
 
