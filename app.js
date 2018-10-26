@@ -3,7 +3,6 @@ var express = require('express');
 var app = express();
 var date = Date();
 
-
 //---비밀번호 보안 pbkdf2 모듈로드---
  var bkfd2Password = require('pbkdf2-password');
  var hasher = bkfd2Password();
@@ -32,7 +31,7 @@ app.listen(3000, () => {
  });
  
 //---mysql 외부 분리 모듈 로드---
-var { mysql, conn} = require('./db');
+var {conn} = require('./db');
 
 //----multer 모듈 로드 (파일 업로드)----
 var multer = require('multer');                // multer 모듈 로드
@@ -306,22 +305,6 @@ app.post('/node/:id/edit', (req, res) => {
             res.status(500).send('Internal Server Error');
         } else {
             res.redirect('/node/'+id);
-        }
-    });
-});
-
-app.post(['/html/:id/edit2'], (req, res) => {
-    var title = req.body.title;
-    var description = req.body.description;
-    var author = req.body.author;
-    var id = req.params.id;        //  id값은 request.params. id 값으로 받는다.
-    var sql = 'UPDATE html SET title=?, description=?, author=? WHERE id=?';
-    conn.query(sql, [title, description, author, id], (err, rows, fields) => {
-        if (err) {
-            console.log(err);
-            res.status(500).send('Internal Server Error');
-        } else {
-            res.redirect('/html/' + id);
         }
     });
 });

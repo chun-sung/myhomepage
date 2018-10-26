@@ -4,15 +4,8 @@ module.exports = function(app){
  var route = express.Router();
  var date = Date();
 
- //---MySQL 접속 코드---
- var mysql = require('mysql');
- var conn = mysql.createConnection({
-     host: 'localhost',
-     user: 'root',
-     password: 'coonjin2',
-     database: 'opentutorials'
- });
- conn.connect();
+ //---mysql 외부 분리 모듈 로드---
+var {conn} = require('../db');
 
 //---라우트: 토픽 추가하기---
  app.get('/html/add2', (req, res) => {
@@ -52,6 +45,23 @@ app.get(['/html', '/html/:id'], (req, res) => {
       });
     } else {
       res.render('html', {date:date, list:rows, session:req.session.displayName});
+    }
+  });
+});
+
+// 라우트: 토픽수정후 데이터 전송
+app.post(['/html/:id/edit2'], (req, res) => {
+  var title = req.body.title;
+  var description = req.body.description;
+  var author = req.body.author;
+  var id = req.params.id; //  id값은 request.params. id 값으로 받는다.
+  var sql = 'UPDATE html SET title=?, description=?, author=? WHERE id=?';
+  conn.query(sql, [title, description, author, id], (err, rows, fields) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send('Internal Server Error');
+    } else {
+      res.redirect('/html/' + id);
     }
   });
 });

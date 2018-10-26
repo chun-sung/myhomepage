@@ -10,5 +10,5 @@ var conn = mysql.createConnection({
 conn.connect();
  
 module.exports = {
-  mysql, conn
+  conn
 }
