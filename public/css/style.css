@@ -5,8 +5,22 @@
     text-align: center;
     color: black;
     border-radius: 0.2%
+    
   }
-.logotitle {
+.top {
+  /* width:50px; */
+  background-color: orangered;
+  position: fixed;
+  left: 0;
+  right:0;
+  top: 0;
+  color: white;
+  
+}
+.line {
+  border-radius: 8px;
+}
+.logotitle {  
   margin-top: 30px;
 }
 .maintitle {
@@ -31,7 +45,7 @@ a:hover {
   border: 1px solid grey;
   width: 1070px;
   margin: auto;
-  background-color: rgb(41, 3, 128);
+  background-color: rgb(41, 3, 128, 0.75);
   overflow: hidden;   /* float: left 로 인해 자식태그를 인식할수 있도록 */
 }
 #menu li {
@@ -106,13 +120,13 @@ article {
 }
 .footwrapper {
   padding: 20px;
-  background-color: rgb(100, 99, 99);
+  background-color: rgb(100, 99, 99, 0.1);
   color: white;
   /* width: 1033px;   */
   /* margin: 0 auto; */
 }
 .bodyWrapper {
-  background-color: rgb(205, 223, 240);
+  background-color: rgb(205, 223, 240, 0.1);
   width: 1072px;
   margin: 0 auto;  
 }
