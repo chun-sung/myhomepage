@@ -1,3 +1,5 @@
+
+
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 * {  margin: 0;  padding: 0;
     text-decoration: none;
@@ -25,15 +27,12 @@
   background-color: rgb(70, 204, 204);
   width: 90px;
   position: fixed;
-  top: 230px;
-  margin-right: 580px;
-  right: 50%;
-  
-  
-  
+  top: 210px;
+  margin-right: 560px;
+  right: 50%;  
   z-index: 100;
 }
-.quick ul li {
+.quick ul li {  
   font-size: 0.8em;
   border: 1px solid grey;
   width: 48px;
@@ -73,7 +72,7 @@ a:hover {
   border: 1px solid grey;
   width: 1070px;
   margin: auto;
-  background-color: rgb(41, 3, 128, 0.75);
+  background-color: #394264;
   overflow: hidden;   /* float: left 로 인해 자식태그를 인식할수 있도록 */
 }
 #menu li {
@@ -116,7 +115,7 @@ color: red;
 }
 .mainimg {
   margin-top: 20px;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 article {
   padding-top: 30px;
