@@ -326,8 +326,8 @@ iframe {
 #quickmenu {
   position: fixed;
   top: 125px;
-  margin-left: 1170px;
-  left: 50%
+  margin-left: 600px;
+  left: 50%;
   z-index: 100;
 }
 #quickmenu li {
