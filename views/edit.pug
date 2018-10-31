@@ -9,12 +9,12 @@ block content
     .form        
       form(action='/node/'+topic.id+'/edit' method='post')
         p(style="margin-bottom:5px")
-          input(type='text' size="48" name='title' value=topic.title)
+          input(type='text' size="102" name='title' value=topic.title)
         p
           textarea(name='description' value=topics.description cols='50' rows='10')
             =topic.description
         p
-          input(type='text' size="48" name='author' value=topic.author)
+          input(type='text' size="102" name='author' value=topic.author)
         p
-          input(type='submit' value='전송')
+          input(type='submit' class="btn" value='전송')
           a(href='/node') 취소

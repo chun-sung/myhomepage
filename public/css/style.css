@@ -14,6 +14,14 @@
     
     background-color: beige;
   }
+.input {
+  width: 200px;
+  height: 25px;
+}
+.btn {
+  width: 70px;
+  height: 25px;
+}
 .top {
   /* width:50px; */
   background-color: rgb(90, 65, 18,0.9);
@@ -23,22 +31,37 @@
   top: 0;
   color: white;  
 }
-.quick {  
-  background-color: rgb(70, 204, 204);
+ul.quick {  
+  
   width: 90px;
   position: fixed;
   top: 210px;
   margin-right: 560px;
   right: 50%;  
-  z-index: 100;
+  border-radius: 20px;
+  
 }
-.quick ul li {  
+.quick ul li {    
+  background-color: rgb(225, 152, 226);
   font-size: 0.8em;
-  border: 1px solid grey;
-  width: 48px;
+  border: 1px solid rgb(209, 103, 211);
+  width: 50px;
+  height: 10px;
   padding: 20px;
   margin-top: -1px;
   margin-right: 10px;
+  border-radius: 20px;
+  
+}
+.quick ul li a {
+  color: white;
+}
+.quick ul li:hover {
+  background-color: rgb(175, 226, 152);
+  transform: translate(360)
+}
+.quick ul li:active {
+  background-color: rgb(135, 179, 166);
 }
 .content {
   text-align: justify;
@@ -147,7 +170,7 @@ article {
 }
 .footwrapper {
   padding: 20px;
-  background-color: rgb(100, 99, 99, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   /* width: 1033px;   */
   /* margin: 0 auto; */
@@ -156,4 +179,8 @@ article {
   background-color: rgb(205, 223, 240, 0.1);
   width: 1072px;
   margin: 0 auto;  
+}
+textarea {
+  width: 720px;
+  height: 300px;
 }

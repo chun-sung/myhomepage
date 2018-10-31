@@ -5,13 +5,13 @@ var abc = document.querySelector('.abc')
 
 var question = document.querySelector('.id')
 question.addEventListener('click', function () {
-    var e = prompt('ID 입력', 'ID');    
+    var e = prompt('ID 를  입력하세요', 'ID');    
     if (e == 'ID') {
         alert('회원 가입을 해주세요');
     } else if(e) {
-        alert('당신의 ID 는' + e + '입니다.');
+        alert('당신의 ID 는 ' + e + ' 입니다.');
     } else {
-        alert('ID가 없다구요?');
+        alert('회원 가입을 해주세요');
     }
 });
 var question = document.querySelector('.question')
@@ -31,5 +31,7 @@ var hidden = document.querySelector('.hidden')
 
 var change = document.querySelector('.change')
     change.addEventListener('click', function(){
-        change.innerHTML = "변경됨";
+        change.innerHTML = "변경";
+        change.style.backgroundColor = "white";
+        change.style.color = "black";
     });

@@ -1,16 +1,17 @@
 extends ./layout
 block content
  h1(style="color:royalblue") 회원 가입
-
+ br
  form.form(action='/member' method='post')
     p(style="margin-bottom: 5px")
-      input(type='text' size="25" name='name' placeholder='name')
+      input(type='text' class="input" name='name' placeholder='name')
     p
-      input(type='password' size="25" name='password' placeholder='password')
+      input(type='password' class="input" name='password' placeholder='password')
     p
-      input(type='text' size="25" name='displayName' placeholder='displayName')
+      input(type='text' class="input" name='displayName' placeholder='displayName')
+    br
     p     
-      input(type='submit' value='회원가입')
+      input(type='submit' class="btn" value='회원가입')
       a(href='/') 취소
     h3(style="color:red") 올바른 ID / PW / displayName 정보를 
     h3(style="color:red")  입력해 주세요.
